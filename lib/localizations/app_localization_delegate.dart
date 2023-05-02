@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:shopapp/theme/app_notifier.dart';
 import 'package:provider/provider.dart';
 
 import 'language.dart';
+
+var baseUrl = dotenv.env['VAR_NAME'];
 
 class AppLocalizationsDelegate extends LocalizationsDelegate {
   final BuildContext context;
@@ -19,6 +22,7 @@ class AppLocalizationsDelegate extends LocalizationsDelegate {
   Future _load(Locale locale) async {
     Provider.of<AppNotifier>(context, listen: false)
         .changeLanguage(Language.getLanguageFromCode(locale.languageCode));
+
     return;
   }
 

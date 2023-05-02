@@ -44,6 +44,9 @@ dependencies:
   shared_preferences: ^2.0.5
   google_fonts: ^2.3.3
 
+  # craete env file
+  flutter_dotenv: ^5.0.2
+
 
   # Icons
   material_design_icons_flutter: 5.0.6996
@@ -65,6 +68,7 @@ dependencies:
   rive: ^0.8.1
   flare_flutter: ^3.0.2
   flutter_intro: ^2.3.1
+  
 
 
 

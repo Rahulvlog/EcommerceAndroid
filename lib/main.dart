@@ -15,10 +15,12 @@ import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutx/themes/app_theme_notifier.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 import 'shopping/views/splash_screen.dart';
 
 Future<void> main() async {
+  await dotenv.load(fileName: ".env");
   //You will need to initialize AppThemeNotifier class for theme changes.
   WidgetsFlutterBinding.ensureInitialized();
 
